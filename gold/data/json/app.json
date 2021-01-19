@@ -1,0 +1,32 @@
+[
+    {
+        "appnum": "8",
+        "apptitle": "Plant Store",
+        "appser": "20210303",
+        "appdes": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a <br \/>\r\n<br \/>\r\nmore-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop <br \/>\r\n<br \/>\r\npublishing packages and web page editors",
+        "appmain": "app_main_003.png",
+        "appthumb": "app_003.png",
+        "appclient": "Florida",
+        "appreg": "2021-01-19"
+    },
+    {
+        "appnum": "3",
+        "apptitle": "Portfolio",
+        "appser": "20210302",
+        "appdes": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br \/>\r\n<br \/>\r\nRichard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, <br \/>\r\n<br \/>\r\nand going through the cites of the word in classical literature, discovered the undoubtable source.",
+        "appmain": "app_main_002.jpg",
+        "appthumb": "app_002.jpg",
+        "appclient": "Unknown",
+        "appreg": "2021-01-19"
+    },
+    {
+        "appnum": "2",
+        "apptitle": "Tesla Model X",
+        "appser": "20210301",
+        "appdes": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br \/>\r\n<br \/>\r\nwhen an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap <br \/>\r\n<br \/>\r\ninto electronic typesetting, remaining essentially unchanged.",
+        "appmain": "app_main_001.png",
+        "appthumb": "app_001.png",
+        "appclient": "Tesla",
+        "appreg": "2021-01-19"
+    }
+]
