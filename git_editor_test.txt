@@ -1,3 +1,0 @@
-git editor test file
-
-add more test text
