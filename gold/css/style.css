@@ -28,6 +28,7 @@ button.commonBtn{
   text-align: center;
   margin-top: 10px;
   transition: all 0.4s;
+  background:#fff;
 }
 
 /* common title style */
