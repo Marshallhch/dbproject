@@ -192,7 +192,7 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
-              <a href="#">view more</a>
+              <a href="/gold/pages/app/app.php">view more</a>
             </div>
 
             <?php
