@@ -10,7 +10,7 @@
   $app_detail_tit=$app_row['GOLD_APP_tit'];
   $app_detail_ser=$app_row['GOLD_APP_ser'];
   $app_detail_des=$app_row['GOLD_APP_des'];
-  // $web_detail_img=$web_row['GOLD_WEB_img'];
+  $app_detail_img=$app_row['GOLD_APP_img'];
   // $web_detail_mImg=$web_row['GOLD_WEB_mimg'];
   // // $design_detail_thumb=$row['GOLD_DE_thumb'];
   $app_detail_cli=$app_row['GOLD_APP_cli'];
@@ -70,19 +70,24 @@
               <div class="appFramebox">
                 <ul id="appMain" class="appMain">
                   <li>
-                    <img src="/gold/data/app_page/app_main/app_main_001.png" alt="">
+                    <img src="/gold/data/app_page/app_main/<?=$app_detail_img?>" alt="">
                   </li>
                   <li>
-                    <img src="/gold/data/app_page/app_main/app_main_002.jpg" alt="">
+                    <img src="/gold/data/app_page/app_main/app_main_005.png" alt="">
                   </li>
                   <li>
-                    <img src="/gold/data/app_page/app_main/app_main_003.png" alt="">
+                    <img src="/gold/data/app_page/app_main/app_main_006.png" alt="">
                   </li>
                 </ul>
                 <span class="frameTop"></span>
                 <span class="frameLeft"></span>
                 <span class="frameRight"></span>
                 <span class="frameBottom"></span>
+              </div>
+
+              <div class="appStoreBtns">
+                <a href="#"><img src="/gold/img/app_store.jpg" alt=""></a>
+                <a href="#"><img src="/gold/img/google_play.jpg" alt=""></a>
               </div>
 
               <p class="detailInfo">

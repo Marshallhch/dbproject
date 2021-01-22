@@ -290,4 +290,6 @@
   .appFramebox{width:70%;}
   .appFramebox>span.frameTop{background-size:cover;}
   .appFramebox>span.frameBottom{background-size:cover;}
+
+  .appStoreBtns a{width:40%;}
 }
