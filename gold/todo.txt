@@ -13,7 +13,15 @@
 12. 앱 데이터베이스 구글플레이, 앱스토어 주소 테이블 컬럼 추가
 13. 앱 앱 데이터베이스 구글플레이, 앱스토어 주소 입력 화면 추가 제작
 
+<<<<<<< HEAD
 14라인 추가됨
+=======
+<<<<<<< HEAD
+되돌림
+=======
+aaa bbb
+>>>>>>> c39a2c228abb5401f7ad82d49dc96c95901596f6
+>>>>>>> parent of 2b1108f (오류 올림)
 
 include $_SERVER['DOCUMENT_ROOT'].'/gold/php_process/connect/db_connect.php';
 
