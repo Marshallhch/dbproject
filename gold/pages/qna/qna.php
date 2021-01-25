@@ -53,34 +53,16 @@
                   <span class="qnaReg">등록일</span>
                   <span class="qnaHit">조회수</span>
                 </li>
-                <li class="qnaContent clear">
-                  <span class="qnaNum">1</span>
-                  <span class="qnaId">marshall</span>
-                  <span class="qnaTit"><a href="#">첫 개시글 입니다.</a></span>
-                  <span class="qnaReg">2021-01-22</span>
-                  <span class="qnaHit">99</span>
-                </li>
-                <li class="qnaContent clear">
-                  <span class="qnaNum">2</span>
-                  <span class="qnaId">nachall</span>
-                  <span class="qnaTit"><a href="#">두번째 개시글 입니다.</a></span>
-                  <span class="qnaReg">2021-01-22</span>
-                  <span class="qnaHit">12</span>
-                </li>
-                <li class="qnaContent clear">
-                  <span class="qnaNum">2</span>
-                  <span class="qnaId">nachall</span>
-                  <span class="qnaTit"><a href="#">두번째 개시글 입니다.</a></span>
-                  <span class="qnaReg">2021-01-22</span>
-                  <span class="qnaHit">12</span>
-                </li>
+
+                
+
               </ul>
             </div>
             <!-- end of qna table -->
 
             <div class="searchPaging clear">
               <div class="search">
-                <form action="abc.php" name="qnaSearch" class="clear">
+                <form action="abc.php" name="qnaSearch" class="clear qnaSearch">
                   <select name="searchSelect" id="" class="searchSelect">
                     <option value="qnaSearchId">아이디</option>
                     <option value="qnaSearchTitle">제목</option>
@@ -100,12 +82,22 @@
             </div>
             <!-- end of search paging -->
 
-            <div class="writeBox">
-              <form action="abc.php" method="post">
-                <input type="text" placeholder="제목을 작성해 주세요.">
-                <input type="text" placeholder="질문을 작성해 주세요.">
-                <button class="writeBtn">글쓰기</button> 
+            <div class="writeBox clear">
+              <div class="qnaGuide">
+                <span>글쓰기</span>
+                <span><?=$userid?></span>
+                <!-- <span><a href="#">로그인</a></span> -->
+              </div>
+              <form action="/gold/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="writeForm" name="writeForm">
+                <p class="qnaTitInput">
+                  <label for="qnaTitle">제목</label>
+                  <input type="text" name="qnaTitle" id="qnaTitle" placeholder="제목을 입력해 주세요.">
+                </p>
+                <p class="qnaTxtInput">
+                  <textarea name="qnaTxt" placeholder="내용을 입력해 주세요"></textarea>
+                </p>
               </form>
+              <button type="submit" class="qnaSubmit">등록</button>
             </div>
 
           </div> 
@@ -122,8 +114,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/gold/js/custom.js"></script>
     <script src="/gold/js/web_design_page.js"></script>
+    <script src="/gold/js/qna_ajax.js"></script>
     <script>
-      
+      const qnaSubmit = document.querySelector(".qnaSubmit");
+      qnaSubmit.addEventListener('click', insertQan);
+
+      function insertQan(){
+        if(!document.writeForm.qnaTitle.value){
+          alert("제목을 입력해 주세요.");
+          document.writeForm.qnaTitle.focus();
+          return;
+        }
+
+        if(!document.writeForm.qnaTxt.value){
+          alert("내용을 입력해 주세요.");
+          document.writeForm.qnaTxt.focus();
+          return;
+        }
+
+        document.writeForm.submit();
+      }
     </script>
   </body>
 </html>
