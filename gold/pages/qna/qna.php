@@ -46,15 +46,8 @@
           <div class="qnaBoxes deWeBoxes">
             <div class="qnaTable">
               <ul class="qnaList">
-                <li class="qnaTitle clear">
-                  <span class="qnaNum">번호</span>
-                  <span class="qnaId">아이디</span>
-                  <span class="qnaTit">제목</span>
-                  <span class="qnaReg">등록일</span>
-                  <span class="qnaHit">조회수</span>
-                </li>
-
                 
+              <!-- ajax code inside here -->
 
               </ul>
             </div>
@@ -72,12 +65,35 @@
                 </form>
               </div>
               <div class="paging">
-                <span class="firstPg"><i class="fa fa-angle-double-left"></i></span>
-                <span class="prevPg"><i class="fa fa-angle-left"></i></span>
-                <span class="PgNum active">1</span>
-                <span class="PgNum">2</span>
-                <span class="nextPg"><i class="fa fa-angle-right"></i></span>
-                <span class="lastPg"><i class="fa fa-angle-double-right"></i></span>
+                <span class="firstPg" onclick="firstPage()"><i class="fa fa-angle-double-left"></i></span>
+                <span class="prevPg" onclick="goPrev()"><i class="fa fa-angle-left"></i></span>
+
+                <?php
+                //database connect
+                include $_SERVER['DOCUMENT_ROOT']."/gold/php_process/connect/db_connect.php";
+                $sql="select * from gold_qna order by GOLD_QNA_num desc";
+
+                $paging_result=mysqli_query($dbConn, $sql);
+                $total_record=mysqli_num_rows($paging_result);
+                $scale=5;
+
+                if($total_record % $scale == 0){
+                  $total_page=floor($total_record/$scale);
+                } else {
+                  $total_page=floor($total_record/$scale) + 1;
+                }
+
+                for($i=1; $i<=$total_page; $i++){
+                ?>
+
+                <span class="PgNum" onclick="getPage(<?=$i?>)"><?=$i?></span>
+
+                <?php
+                }
+                ?>
+
+                <span class="nextPg" onclick="goNext()"><i class="fa fa-angle-right"></i></span>
+                <span class="lastPg" onclick="lastPage()"><i class="fa fa-angle-double-right"></i></span>
               </div>
             </div>
             <!-- end of search paging -->
@@ -85,8 +101,18 @@
             <div class="writeBox clear">
               <div class="qnaGuide">
                 <span>글쓰기</span>
+                <?php
+                if($userid==''){
+                ?>
+                <span><a href="/gold/pages/login/login_form.php">로그인</a></span>
+                <?php
+                } else {
+                ?>
                 <span><?=$userid?></span>
-                <!-- <span><a href="#">로그인</a></span> -->
+                <?php
+                }
+                ?>
+                
               </div>
               <form action="/gold/php_process/pages/qna_insert.php?id=<?=$userid?>" method="post" class="writeForm" name="writeForm">
                 <p class="qnaTitInput">
@@ -97,7 +123,17 @@
                   <textarea name="qnaTxt" placeholder="내용을 입력해 주세요"></textarea>
                 </p>
               </form>
+              <?php
+              if($userid==''){
+              ?>
+              <button type="submit" onclick="plzLogin()">등록</button>
+              <?php
+              } else {
+              ?>
               <button type="submit" class="qnaSubmit">등록</button>
+              <?php
+              }
+              ?>
             </div>
 
           </div> 
@@ -119,6 +155,10 @@
       const qnaSubmit = document.querySelector(".qnaSubmit");
       qnaSubmit.addEventListener('click', insertQan);
 
+      function plzLogin(){
+        alert('글쓰기를 하시려면 로그인이 필요합니다.');
+      }
+
       function insertQan(){
         if(!document.writeForm.qnaTitle.value){
           alert("제목을 입력해 주세요.");
@@ -134,6 +174,8 @@
 
         document.writeForm.submit();
       }
+
+      
     </script>
   </body>
 </html>
