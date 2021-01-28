@@ -16,6 +16,7 @@
 15. 페이지네이션 갯수 한정
 16. 네이버, 카카오 등으로 로그인하기
 17. 조회수 증가
+18. 글 확인 <br> 출력 제거
 
 include $_SERVER['DOCUMENT_ROOT'].'/gold/php_process/connect/db_connect.php';
 
