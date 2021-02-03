@@ -1,25 +1,5 @@
 [
     {
-        "appnum": "13",
-        "apptitle": "Medicine Reminder",
-        "appser": "20210308",
-        "appdes": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words <br \/>\r\n<br \/>\r\nwhich don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing <br \/>\r\n<br \/>\r\nhidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,",
-        "appmain": "app_main_008.jpg",
-        "appthumb": "app_008.jpg",
-        "appclient": "Hanyang Hosp.",
-        "appreg": "2021-01-20"
-    },
-    {
-        "appnum": "12",
-        "apptitle": "Dimest",
-        "appser": "20210307",
-        "appdes": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from <br \/>\r\n<br \/>\r\n\"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, <br \/>\r\n<br \/>\r\naccompanied by English",
-        "appmain": "app_main_007.png",
-        "appthumb": "app_007.png",
-        "appclient": "Dimest Company",
-        "appreg": "2021-01-20"
-    },
-    {
         "appnum": "11",
         "apptitle": "Plants App",
         "appser": "20210306",
